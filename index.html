@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <title>Hide & Seek</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+    <div class="backBtn">Back</div>
+
+    <div class="main-outer-container">
+        <div class="selectDifficulty container">
+            <div class="heading row">
+                <h1>Select Difficulty</h1>
+            </div>
+            <div class="row">
+                <div id="easybtn" class="btn  col-md-12">Easy</div>
+            </div>
+            <div class="row">
+
+                <div id="mediumbtn" class="btn col-md-12">Medium
+                </div>
+            </div>
+            <div class="row">
+
+                <div id="hardbtn" class="btn col-md-12">Hard</div>
+            </div>
+        </div>
+        <div class="gameMainDiv">
+            <canvas class="background"></canvas>
+
+            <div id="easy" class="gamediv container">
+                <div class="row" style="height: 50px; text-align:center ;border-radius: 10px;align-items: center;">
+                    <h2>
+                        Hide & Seek</h2>
+                </div>
+
+                <div class="horizontalNav">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                </div>
+                <div class="row">
+                    <div class="col-1 vn" id="">A</div>
+                    <div class="dibba col 1" id="a1"></div>
+                    <div class="dibba col 2" id="a2"></div>
+                    <div class="dibba col 3" id="a3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1 vn" id="">B</div>
+                    <div class="dibba col 4" id="b1"></div>
+                    <div class="dibba col 5" id="b2"></div>
+                    <div class="dibba col 6" id="b3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1 vn" id="">C</div>
+                    <div class="dibba col 7" id="c1"></div>
+                    <div class="dibba col 8" id="c2"></div>
+                    <div class="dibba col 9" id="c3"></div>
+                </div>
+                <div class="row output" style="height: 50px;">
+                    <div style="width: 100%; height: 95%; font-size: 1.5rem; color: darkorange; text-align: center;font-family: 'Silkscreen', cursive;"
+                        id="rating"></div>
+                </div>
+                <div class="row input" style="height: 50px;margin-top: 3px; ">
+                    <div class="col-9" id="guessInput" style="text-align: center;"><input type="textbox"
+                            placeholder="Guess the box "
+                            style="background-color: white;box-shadow: 0px 0px 2px inset;padding: 0px 5px ; margin: 2px 2px; width: 98%;">
+                    </div>
+                    <div class="col-3" id="guessbtn"><button
+                            style="background-color: rgb(255, 187, 104); color: white;margin-top: 2px; height: 97%;">Guess</button>
+                    </div>
+                </div>
+
+                <div class="resetBtn"
+                    style="border: 1px solid darkorange; width:100%; margin:auto; margin-top: 8px ;font-size: 1.2rem; text-align: center; ">
+                    Reset</div>
+            </div>
+
+
+            <div id="medium" class="gamediv container">
+                <div class="row" style="height: 50px; text-align:center ;border-radius: 10px;align-items: center;">
+                    <h2 style="width: 90%; position: relative; margin: auto;font-size: 2.75rem;">
+                        Hide & Seek </h2>
+                </div>
+                <div class="horizontalNav">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                </div>
+                <div class=" row">
+                    <div class="col-1 vn" id="">A</div>
+                    <div class="dibba col 1" id="ma1"></div>
+                    <div class="dibba col 2" id="ma2"></div>
+                    <div class="dibba col 3" id="ma3"></div>
+                    <div class="dibba col 4" id="ma4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1 vn" id="">B</div>
+
+                    <div class="dibba col 5" id="mb1"></div>
+                    <div class="dibba col 6" id="mb2"></div>
+                    <div class="dibba col 7" id="mb3"></div>
+                    <div class="dibba col 8" id="mb4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1 vn" id="">C</div>
+
+                    <div class="dibba col 9" id="mc1"></div>
+                    <div class="dibba col 10" id="mc2"></div>
+                    <div class="dibba col 11" id="mc3"></div>
+                    <div class="dibba col 12" id="mc4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1 vn" id="">D</div>
+
+                    <div class="dibba col 13" id="md1"></div>
+                    <div class="dibba col 14" id="md2"></div>
+                    <div class="dibba col 15" id="md3"></div>
+                    <div class="dibba col 16" id="md4"></div>
+                </div>
+                <div class="row output" style="height: 25px;">
+                    <div style="width: 100%; height: 95%; font-size: 1.5rem; color: darkorange; text-align: center;"
+                        id="rating"></div>
+                </div>
+                <div class="row input" style="height: 50px; margin-top: 3px;">
+                    <div class="col-9" id="guessInput" style="text-align: center; height: 60%;"><input type="textbox"
+                            placeholder="Guess the box "
+                            style="background-color: white;box-shadow: 0px 0px 2px inset;padding: 0px 5px ; margin: 2px 2px;height: 50%; width: 98%;">
+                    </div>
+                    <div class="col-3" id="guessbtn" style="height: 50%;"><button
+                            style="background-color: rgb(255, 187, 104); color: white;margin-top: 2px; height: 60%;">Guess</button>
+                    </div>
+                </div>
+
+                <div class="resetBtn"
+                    style="border: 1px solid darkorange;position: relative; bottom: 55px; width:100%; margin:auto; margin-top: 8px ;font-size: 1.2rem; text-align: center;">
+                    Reset</div>
+            </div>
+
+
+            <div id="hard" class="gamediv container">
+                <div class="row" style="height: 30px; text-align:center ;border-radius: 10px;align-items: center;">
+                    <h2 style="width: 90%;margin: auto;font-size: 2rem;position: relative;">
+                        Hide & Seek </h2>
+                </div>
+                <div class="horizontalNav" style="animation: 1s ease-out 0s 1 slideInFromLeft;">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                </div>
+                <div class="row" ">
+                    <div class=" col-1 vn" id="">A</div>
+
+                <div class="dibba col 1" id="ha1"></div>
+                <div class="dibba col 2" id="ha2"></div>
+                <div class="dibba col 3" id="ha3"></div>
+                <div class="dibba col 4" id="ha4"></div>
+                <div class="dibba col 5" id="ha5"></div>
+                <div class="dibba col 6" id="ha6"></div>
+            </div>
+            <div class="row">
+                <div class="col-1 vn" id="">B</div>
+
+                <div class="dibba col 7" id="hb1"></div>
+                <div class="dibba col 8" id="hb2"></div>
+                <div class="dibba col 9" id="hb3"></div>
+                <div class="dibba col 10" id="hb4"></div>
+                <div class="dibba col 11" id="hb5"></div>
+                <div class="dibba col 12" id="hb6"></div>
+            </div>
+            <div class="row">
+                <div class="col-1 vn" id="">C</div>
+
+                <div class="dibba col 13" id="hc1"></div>
+                <div class="dibba col 14" id="hc2"></div>
+                <div class="dibba col 15" id="hc3"></div>
+                <div class="dibba col 16" id="hc4"></div>
+                <div class="dibba col 17" id="hc5"></div>
+                <div class="dibba col 18" id="hc6"></div>
+            </div>
+            <div class="row">
+                <div class="col-1 vn" id="">D</div>
+
+                <div class="dibba col 19" id="hd1"></div>
+                <div class="dibba col 20" id="hd2"></div>
+                <div class="dibba col 21" id="hd3"></div>
+                <div class="dibba col 22" id="hd4"></div>
+                <div class="dibba col 23" id="hd5"></div>
+                <div class="dibba col 24" id="hd6"></div>
+            </div>
+            <div class="row">
+                <div class="col-1 vn" id="">E</div>
+
+                <div class="dibba col 25" id="he1"></div>
+                <div class="dibba col 26" id="he2"></div>
+                <div class="dibba col 27" id="he3"></div>
+                <div class="dibba col 28" id="he4"></div>
+                <div class="dibba col 29" id="he5"></div>
+                <div class="dibba col 30" id="he6"></div>
+            </div>
+            <div class="row">
+                <div class="col-1 vn" id="">F</div>
+
+                <div class="dibba col 31" id="hf1"></div>
+                <div class="dibba col 32" id="hf2"></div>
+                <div class="dibba col 33" id="hf3"></div>
+                <div class="dibba col 34" id="hf4"></div>
+                <div class="dibba col 35" id="hf5"></div>
+                <div class="dibba col 36" id="hf6"></div>
+            </div>
+            <div class="row output" style="height: 25px;">
+                <div style="width: 100%; height: 95%;margin-top: 10px; font-size: 1.5rem; color: darkorange; text-align: center;"
+                    id="rating"></div>
+            </div>
+            <div class="row input" style="height: 50px; margin-top: 10px ;padding: 5px 5px;">
+                <div class="col-9" id="guessInput"><input type="textbox" placeholder="Guess the box"></div>
+                <div class="col-3" id="guessbtn"><button
+                        style="background-color: darkorange; color:white;">Guess</button>
+                </div>
+                <div class="col-12 resetBtn"
+                    style="border: 1px solid darkorange; width:100%; margin:auto; margin-top: 8px ;font-size: 1.2rem; text-align: center;">
+                    Reset</div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="/script.js"></script>
+
+
+</html>
